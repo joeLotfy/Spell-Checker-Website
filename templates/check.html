@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <section>
+        <div>
+            Your input : <br>
+            <div style="background-color: #f0f0f0; padding: 10px 150px;">{{ text }}</div><br>
+            <div style="display: inline-block;
+            margin-top: 17px;
+            font-size: 1.5em;
+            font-weight: 600;
+            background-color: red;
+            padding: 5px">
+                Wrong Words Are {{ susWords }}
+            </div>
+        </div>
+
+
+        <div style="font-size:1.6em;
+        background-color: ">
+            <ol>
+                {% for word in susWords %}
+                <li> (--" {{ word }} "--) Most Likely Will be --> (--" {{ corrections[loop.index0] }} "--) , Or MayBe in --> {{ candidates[loop.index0] }}
+                {% endfor %}
+            </ol>
+
+        </div>
+    </section>
+
+{% endblock %}

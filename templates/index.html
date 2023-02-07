@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <header>
+
+        <a href="#" class="logo">Spell Checker</a>
+
+        <nav class="navigation">
+            <a href="#check">Check</a>
+            <a href="#about">About Me</a>
+            <a href="#Contact">Contact Me</a>
+        </nav>
+
+    </header>
+
+
+
+    <section class="main" id="about">
+        <div>
+            <h2>Hello, I'm Yusuf<br><span>A Young Egyptian Software Engineer<br>And A Programmer</span></h2>
+            <h3>You are here today to check your spelling<br>Don't forget to leave a feedback at me e-mail</h3>
+            <a href="#Contact" ><button class="mainButton">Contact Me</button></a>
+
+        </div>
+    </section>
+
+
+    <section id="check" style="background-color:#B98A9F; border: 3px dashed grey;">
+        <form action="/check" method="post">
+            <textarea rows="15" clos="30" autocomplete="off" autofocus name="lol" placeholder="Enter Text" type="text" class="paragraphInput" style=" padding: 5px;">
+            </textarea>
+            <button type="submit">Check</button>
+        </form>
+    </section>
+
+
+
+    <div class="container" style="border-bottom: 3px dashed grey">
+        <div class="section">
+            <h1 class="logo">Fun Quiz</h1>
+            <hr>
+            <h2>Is this the best website you've ever laid your eyes on?</h2>
+            <button id="incorrect">hmm, not sure</button>
+            <button id="correct">ABSOLUTELY</button>
+            <p id="message"></p>
+        </div>
+    </div>
+
+
+    <section style="font-size: 1.5em;
+    font-weight: 600;">CONTACT ME
+            <section class=" cards contact" id="Contact">
+
+                <h2 class="title" id="Contact">Let's Work Together</h2>
+
+                <div class="content">
+
+                        <div class="serviceCard">
+                                <div class="info">
+                                    <h3>Phone</h3>
+                                    <p>+201091197375</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="serviceCard">
+                                <div class="info">
+                                    <h3>E-mail</h3>
+                                    <p>ejrgfjg@gmail.com</p>
+                            </div>
+                        </div>
+
+
+                        <div class="serviceCard">
+                                <div class="info">
+                                    <h3>Facebook</h3>
+                                    <p><a href="https://www.facebook.com/Yosef1104">Yusuf A. HassanLotfy Ali</a></p>
+                            </div>
+                        </div>
+
+                        <div class="serviceCard">
+                                <div class="info">
+                                    <h3>LinkedIn</h3>
+                                    <p><a href="https://www.linkedin.com/in/yusuf-hassan-9871741a5/">Yusuf A. HassanLotfy Ali</a></p>
+                            </div>
+                        </div>
+
+                </div>
+
+            </section>
+
+
+    </section>
+
+
+
+    <footer class="footer">
+        <p class="footerTitle"> Copyrights @<span>Yusuf A. HassanLotfy ALi</span></p>
+    </footer>
+
+{% endblock %}
